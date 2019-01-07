@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">KelsonAPP</string>
+    <string name="title_prog">Progresso</string>
+    <string name="title_peso">Peso</string>
+    <string name="title_data">Data</string>
+    <string name="title_medida">Cintura</string>
+    <string name="title_save">Salvar</string>
+    <string name="title_home">Home</string>
+</resources>

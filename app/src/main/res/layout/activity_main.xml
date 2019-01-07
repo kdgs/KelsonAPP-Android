@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/navigation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="0dp"
+        android:background="?android:attr/windowBackground"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:menu="@menu/navigation" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title_save"
+        app:layout_constraintBottom_toTopOf="@+id/navigation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="@dimen/activity_vertical_margin_textview"
+        android:text="@string/title_data"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.vicmikhailau.maskededittext.MaskedEditText
+        android:id="@+id/editTextDate"
+        android:labelFor="@id/editTextDate"
+        android:autofillHints="@id/editTextDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:ems="10"
+        android:inputType="date"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintStart_toEndOf="@+id/textViewData"
+        app:layout_constraintTop_toTopOf="parent"
+        app:mask="##/##/####"/>
+
+    <TextView
+        android:id="@+id/textViewPeso"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="@dimen/activity_vertical_margin_textview"
+        android:text="@string/title_peso"
+        app:layout_constraintTop_toBottomOf="@id/textViewData"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <com.vicmikhailau.maskededittext.MaskedEditText
+        android:id="@+id/editTextPeso"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:labelFor="@id/editTextPeso"
+        android:autofillHints="@id/editTextPeso"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintStart_toEndOf="@+id/textViewPeso"
+        app:layout_constraintTop_toBottomOf="@id/editTextDate"
+        app:mask="##,##"/>
+
+    <TextView
+        android:id="@+id/textViewMedida"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="@dimen/activity_vertical_margin_textview"
+        android:text="@string/title_medida"
+        app:layout_constraintTop_toBottomOf="@id/textViewPeso"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <com.vicmikhailau.maskededittext.MaskedEditText
+        android:id="@+id/editTextMedida"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:labelFor="@id/editTextMedida"
+        android:autofillHints="@id/editTextMedida"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintStart_toEndOf="@+id/textViewMedida"
+        app:layout_constraintTop_toBottomOf="@id/editTextPeso"
+        app:mask="###,##"/>
+
+</android.support.constraint.ConstraintLayout>
